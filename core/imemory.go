@@ -5,7 +5,6 @@ type IMemory interface {
 	RamSize() uint64
 	GetAddressBase() uint32
 	GetAddressEnd() uint64
-
 	Read(address uint32) byte
 	Read8(address uint32) uint8
 	Read16(address uint32) uint16

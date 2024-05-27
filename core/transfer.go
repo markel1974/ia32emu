@@ -12,8 +12,6 @@ func NewTransfer(reg *X86Registers, memory IMemory) *Transfer {
 	}
 }
 
-// Transfer instructions
-
 func (t *Transfer) MovRM8R8() {
 	reg := t.reg
 	reg.EIP += 1

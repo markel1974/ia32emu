@@ -5,8 +5,6 @@ import (
 	"os"
 )
 
-//Arithmetic instructions
-
 type ALU struct {
 	reg *X86Registers
 	mem IMemory

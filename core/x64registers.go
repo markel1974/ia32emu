@@ -43,8 +43,8 @@ type X64registers struct {
 	MM5 uint64
 	MM6 uint64
 	MM7 uint64
-	// TODO: XMM registers (XMM0 through XMM15) and the MXCSR register
-	// uint128 doesn't existed
+	// TODO XMM registers (XMM0 through XMM15)
+	// TODO MXCSR register
 
 	// Control Registers
 	CR0  uint64
@@ -68,42 +68,76 @@ type X64registers struct {
 }
 
 func (r *X64registers) Init() {
-	v := reflect.ValueOf(r).Elem()
-	t := v.Type()
+	r.RAX = 0
+	r.RCX = 0
+	r.RDX = 0
+	r.RBX = 0
+	r.RSP = 0
+	r.RBP = 0
+	r.RSI = 0
+	r.RDI = 0
+	r.R8 = 0
+	r.R9 = 0
+	r.R10 = 0
+	r.R11 = 0
+	r.R12 = 0
+	r.R13 = 0
+	r.R14 = 0
+	r.R15 = 0
+	// Instruction Register
+	r.RIP = 0
+	// Segment Registers
+	r.CS = 0
+	r.DS = 0
+	r.SS = 0
+	r.ES = 0
+	r.FS = 0
+	r.GS = 0
+	// FLAGS Register
+	r.RFLAGS = uint64(2)
+	// MMX registers (MM0 through MM7)
+	r.MM0 = 0
+	r.MM1 = 0
+	r.MM2 = 0
+	r.MM3 = 0
+	r.MM4 = 0
+	r.MM5 = 0
+	r.MM6 = 0
+	r.MM7 = 0
+	// TODO: XMM registers (XMM0 through XMM15) and the MXCSR register
 
-	for i := 0; i < v.NumField(); i++ {
-		f := v.Field(i)
-		switch f.Kind() {
-		case reflect.Uint16:
-			f.Set(reflect.ValueOf(uint16(0)))
+	// Control Registers
+	r.CR0 = 0
+	r.CR1 = 0
+	r.CR2 = 0
+	r.CR3 = 0
+	r.CR4 = 0
+	r.CR5 = 0
+	r.CR6 = 0
+	r.CR7 = 0
+	r.CR8 = 0
+	r.CR9 = 0
+	r.CR10 = 0
+	r.CR11 = 0
+	r.CR12 = 0
+	r.CR13 = 0
+	r.CR14 = 0
+	r.CR15 = 0
 
-		case reflect.Uint32:
-			f.Set(reflect.ValueOf(uint32(0)))
-
-		case reflect.Uint64:
-			if t.Field(i).Name == "RFLAGS" {
-				// Reserved 1st bit, it's always 1 in RFLAGS.
-				f.Set(reflect.ValueOf(uint64(2))) // 0b10
-			} else {
-				f.Set(reflect.ValueOf(uint64(0)))
-			}
-		}
-	}
+	// Extended Feature Enable Register
+	r.IA32Efer = 0
 }
 
 func (r *X64registers) Dump() {
 	v := reflect.ValueOf(&r).Elem()
 	t := v.Type()
-
-	fmt.Println("==================== registers ====================")
+	fmt.Println("==================== X64 registers ====================")
 	for i := 0; i < 24; i++ {
 		registerName := t.Field(i).Name
 		registerValue := v.Field(i).Interface()
-
 		switch registerName {
 		case "RFLAGS":
-			fmt.Printf("%02d: %s = %d (%064b)\n",
-				i+1, registerName, registerValue, registerValue)
+			fmt.Printf("%02d: %s = %d (%064b)\n", i+1, registerName, registerValue, registerValue)
 		default:
 			fmt.Printf("%02d: %s = %d\n",
 				i+1, registerName, registerValue)
