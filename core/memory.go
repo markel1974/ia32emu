@@ -4,8 +4,9 @@ type Memory struct {
 	addressBase uint32
 	addressEnd  uint64
 	reg         *X86Registers
-	ram         []byte
-	debug       bool
+	//TODO must be cpu aligned!! 32/64 bit
+	ram   []byte
+	debug bool
 }
 
 func NewMemory(reg *X86Registers, ram []byte, addressBase uint32, debug bool) *Memory {

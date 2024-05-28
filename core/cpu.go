@@ -37,7 +37,7 @@ func NewCPU(reg *X86Registers, mem IMemory, bitMode int, debug bool) *CPU {
 }
 
 func (cpu *CPU) Init() error {
-	cpu.reg.Init()
+	//cpu.reg.Init()
 	return nil
 }
 

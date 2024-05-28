@@ -104,8 +104,6 @@ func (s *Stack) Pop32DS() {
 	reg.EIP += 1
 }
 
-// 16 bit instructions
-
 func (s *Stack) Push16ES() {
 	reg := s.reg
 	mem := s.mem
@@ -127,7 +125,7 @@ func (s *Stack) Push16CS() {
 	reg.EIP += 1
 }
 
-func (s *Stack) pop16CS() {
+func (s *Stack) Pop16CS() {
 	reg := s.reg
 	mem := s.mem
 	reg.CS = mem.Pop16()
@@ -135,7 +133,7 @@ func (s *Stack) pop16CS() {
 }
 
 func (s *Stack) Code0F16() {
-	s.pop16CS()
+	s.Pop16CS()
 }
 
 func (s *Stack) Push16SS() {

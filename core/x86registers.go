@@ -52,30 +52,32 @@ type X86Registers struct {
 	CR6 uint64
 	CR7 uint64
 
-	baseAddress  uint32
-	stackAddress uint32
-	debug        bool
+	//baseAddress  uint32
+	//stackAddress uint32
+	debug bool
 }
 
 func NewIA32registers(baseAddress uint32, stackAddress uint32, debug bool) *X86Registers {
-	return &X86Registers{
-		baseAddress:  baseAddress,
-		stackAddress: stackAddress,
-		debug:        debug,
+	r := &X86Registers{
+		//baseAddress:  baseAddress,
+		//stackAddress: stackAddress,
+		debug: debug,
 	}
+	r.init(baseAddress, stackAddress)
+	return r
 }
 
-func (r *X86Registers) Init() {
+func (r *X86Registers) init(baseAddress uint32, stackAddress uint32) {
 	r.EAX = 0
 	r.ECX = 0
 	r.EDX = 0
 	r.EBX = 0
-	r.ESP = r.stackAddress
+	r.ESP = stackAddress
 	r.EBP = 0
 	r.ESI = 0
 	r.EDI = 0
 
-	r.EIP = r.baseAddress
+	r.EIP = baseAddress
 
 	r.CS = 0
 	r.DS = 0
