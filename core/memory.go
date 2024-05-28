@@ -46,16 +46,16 @@ func (mem *Memory) Read8(address uint32) uint8 {
 
 func (mem *Memory) Read16(address uint32) uint16 {
 	var ret uint16
-	for i := 0; i < 2; i++ {
-		ret |= uint16(mem.Read(address+uint32(i))) << (8 * uint32(i))
+	for i := uint32(0); i < 2; i++ {
+		ret |= uint16(mem.Read(address+i)) << (8 * i)
 	}
 	return ret
 }
 
 func (mem *Memory) Read32(address uint32) uint32 {
 	var ret uint32
-	for i := 0; i < 4; i++ {
-		ret |= uint32(mem.Read(address+uint32(i))) << (8 * uint32(i))
+	for i := uint32(0); i < 4; i++ {
+		ret |= uint32(mem.Read(address+i)) << (8 * i)
 	}
 	return ret
 }

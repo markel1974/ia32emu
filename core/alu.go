@@ -21,54 +21,54 @@ func (a *ALU) addRM8R8() {
 	reg := a.reg
 	reg.EIP += 1
 	modrm := NewModRM(a.reg, a.mem)
-	r8 := modrm.getR8()
-	rm8 := modrm.getRM8()
-	modrm.setRM8(rm8 + r8)
+	r8 := modrm.GetR8()
+	rm8 := modrm.GetRM8()
+	modrm.SetRM8(rm8 + r8)
 }
 
 func (a *ALU) addRM16R16() {
 	reg := a.reg
 	reg.EIP += 1
 	modrm := NewModRM(a.reg, a.mem)
-	r16 := modrm.getR16()
-	rm16 := modrm.getRM16()
-	modrm.setRM16(rm16 + r16)
+	r16 := modrm.GetR16()
+	rm16 := modrm.GetRM16()
+	modrm.SetRM16(rm16 + r16)
 }
 
 func (a *ALU) addRM32R32() {
 	reg := a.reg
 	reg.EIP += 1
 	modrm := NewModRM(a.reg, a.mem)
-	r32 := modrm.getR32()
-	rm32 := modrm.getRM32()
-	modrm.setRM32(rm32 + r32)
+	r32 := modrm.GetR32()
+	rm32 := modrm.GetRM32()
+	modrm.SetRM32(rm32 + r32)
 }
 
 func (a *ALU) addR8RM8() {
 	reg := a.reg
 	reg.EIP += 1
 	modrm := NewModRM(a.reg, a.mem)
-	r8 := modrm.getR8()
-	rm8 := modrm.getRM8()
-	modrm.setR8(rm8 + r8)
+	r8 := modrm.GetR8()
+	rm8 := modrm.GetRM8()
+	modrm.SetR8(rm8 + r8)
 }
 
 func (a *ALU) addR16RM16() {
 	reg := a.reg
 	reg.EIP += 1
 	modrm := NewModRM(a.reg, a.mem)
-	r16 := modrm.getR16()
-	rm16 := modrm.getRM16()
-	modrm.setR16(rm16 + r16)
+	r16 := modrm.GetR16()
+	rm16 := modrm.GetRM16()
+	modrm.SetR16(rm16 + r16)
 }
 
 func (a *ALU) addR32RM32() {
 	reg := a.reg
 	reg.EIP += 1
 	modrm := NewModRM(a.reg, a.mem)
-	r32 := modrm.getR32()
-	rm32 := modrm.getRM32()
-	modrm.setR32(rm32 + r32)
+	r32 := modrm.GetR32()
+	rm32 := modrm.GetRM32()
+	modrm.SetR32(rm32 + r32)
 }
 
 func (a *ALU) addALImm8() {
@@ -99,54 +99,54 @@ func (a *ALU) andRM8R8() {
 	reg := a.reg
 	reg.EIP += 1
 	modrm := NewModRM(a.reg, a.mem)
-	r8 := modrm.getR8()
-	rm8 := modrm.getRM8()
-	modrm.setRM8(rm8 & r8)
+	r8 := modrm.GetR8()
+	rm8 := modrm.GetRM8()
+	modrm.SetRM8(rm8 & r8)
 }
 
 func (a *ALU) andRM16R16() {
 	reg := a.reg
 	reg.EIP += 1
 	modrm := NewModRM(a.reg, a.mem)
-	r16 := modrm.getR16()
-	rm16 := modrm.getRM16()
-	modrm.setRM16(rm16 & r16)
+	r16 := modrm.GetR16()
+	rm16 := modrm.GetRM16()
+	modrm.SetRM16(rm16 & r16)
 }
 
 func (a *ALU) andRM32R32() {
 	reg := a.reg
 	reg.EIP += 1
 	modrm := NewModRM(a.reg, a.mem)
-	r32 := modrm.getR32()
-	rm32 := modrm.getRM32()
-	modrm.setRM32(rm32 & r32)
+	r32 := modrm.GetR32()
+	rm32 := modrm.GetRM32()
+	modrm.SetRM32(rm32 & r32)
 }
 
 func (a *ALU) andR8RM8() {
 	reg := a.reg
 	reg.EIP += 1
 	modrm := NewModRM(a.reg, a.mem)
-	r8 := modrm.getR8()
-	rm8 := modrm.getRM8()
-	modrm.setR8(rm8 & r8)
+	r8 := modrm.GetR8()
+	rm8 := modrm.GetRM8()
+	modrm.SetR8(rm8 & r8)
 }
 
 func (a *ALU) andR16RM16() {
 	reg := a.reg
 	reg.EIP += 1
 	modrm := NewModRM(a.reg, a.mem)
-	r16 := modrm.getR16()
-	rm16 := modrm.getRM16()
-	modrm.setR16(rm16 & r16)
+	r16 := modrm.GetR16()
+	rm16 := modrm.GetRM16()
+	modrm.SetR16(rm16 & r16)
 }
 
 func (a *ALU) andR32RM32() {
 	reg := a.reg
 	reg.EIP += 1
 	modrm := NewModRM(a.reg, a.mem)
-	r32 := modrm.getR32()
-	rm32 := modrm.getRM32()
-	modrm.setR32(rm32 & r32)
+	r32 := modrm.GetR32()
+	rm32 := modrm.GetRM32()
+	modrm.SetR32(rm32 & r32)
 }
 
 func (a *ALU) andALImm8() {
@@ -177,54 +177,54 @@ func (a *ALU) orRM8R8() {
 	reg := a.reg
 	reg.EIP += 1
 	modrm := NewModRM(a.reg, a.mem)
-	r8 := modrm.getR8()
-	rm8 := modrm.getRM8()
-	modrm.setRM8(rm8 | r8)
+	r8 := modrm.GetR8()
+	rm8 := modrm.GetRM8()
+	modrm.SetRM8(rm8 | r8)
 }
 
 func (a *ALU) orRM16R16() {
 	reg := a.reg
 	reg.EIP += 1
 	modrm := NewModRM(a.reg, a.mem)
-	r16 := modrm.getR16()
-	rm16 := modrm.getRM16()
-	modrm.setRM16(rm16 | r16)
+	r16 := modrm.GetR16()
+	rm16 := modrm.GetRM16()
+	modrm.SetRM16(rm16 | r16)
 }
 
 func (a *ALU) orRM32R32() {
 	reg := a.reg
 	reg.EIP += 1
 	modrm := NewModRM(a.reg, a.mem)
-	r32 := modrm.getR32()
-	rm32 := modrm.getRM32()
-	modrm.setRM32(rm32 | r32)
+	r32 := modrm.GetR32()
+	rm32 := modrm.GetRM32()
+	modrm.SetRM32(rm32 | r32)
 }
 
 func (a *ALU) orR8RM8() {
 	reg := a.reg
 	reg.EIP += 1
 	modrm := NewModRM(a.reg, a.mem)
-	r8 := modrm.getR8()
-	rm8 := modrm.getRM8()
-	modrm.setR8(rm8 | r8)
+	r8 := modrm.GetR8()
+	rm8 := modrm.GetRM8()
+	modrm.SetR8(rm8 | r8)
 }
 
 func (a *ALU) orR16RM16() {
 	reg := a.reg
 	reg.EIP += 1
 	modrm := NewModRM(a.reg, a.mem)
-	r16 := modrm.getR16()
-	rm16 := modrm.getRM16()
-	modrm.setR16(rm16 | r16)
+	r16 := modrm.GetR16()
+	rm16 := modrm.GetRM16()
+	modrm.SetR16(rm16 | r16)
 }
 
 func (a *ALU) orR32RM32() {
 	reg := a.reg
 	reg.EIP += 1
 	modrm := NewModRM(a.reg, a.mem)
-	r32 := modrm.getR32()
-	rm32 := modrm.getRM32()
-	modrm.setR32(rm32 | r32)
+	r32 := modrm.GetR32()
+	rm32 := modrm.GetRM32()
+	modrm.SetR32(rm32 | r32)
 }
 
 func (a *ALU) orALImm8() {
@@ -255,8 +255,8 @@ func (a *ALU) cmpR16RM16() {
 	reg := a.reg
 	reg.EIP += 1
 	modrm := NewModRM(a.reg, a.mem)
-	r16 := modrm.getR16()
-	rm16 := modrm.getRM16()
+	r16 := modrm.GetR16()
+	rm16 := modrm.GetRM16()
 	result := uint32(r16) - uint32(rm16)
 	reg.updateEFlagsSub16(r16, rm16, result)
 }
@@ -265,8 +265,8 @@ func (a *ALU) cmpR32RM32() {
 	reg := a.reg
 	reg.EIP += 1
 	modrm := NewModRM(a.reg, a.mem)
-	r32 := modrm.getR32()
-	rm32 := modrm.getRM32()
+	r32 := modrm.GetR32()
+	rm32 := modrm.GetRM32()
 	result := uint64(r32) - uint64(rm32)
 	reg.updateEFlagsSub32(r32, rm32, result)
 }
@@ -341,10 +341,10 @@ func (a *ALU) subRM16R16() {
 	reg := a.reg
 	reg.EIP += 1
 	modrm := NewModRM(a.reg, a.mem)
-	rm16 := modrm.getRM16()
-	r16 := modrm.getR16()
+	rm16 := modrm.GetRM16()
+	r16 := modrm.GetR16()
 	result := uint32(rm16) - uint32(r16)
-	modrm.setRM16(uint16(result))
+	modrm.SetRM16(uint16(result))
 	reg.updateEFlagsSub16(rm16, r16, result)
 }
 
@@ -352,10 +352,10 @@ func (a *ALU) subRM32R32() {
 	reg := a.reg
 	reg.EIP += 1
 	modrm := NewModRM(a.reg, a.mem)
-	rm32 := modrm.getRM32()
-	r32 := modrm.getR32()
+	rm32 := modrm.GetRM32()
+	r32 := modrm.GetR32()
 	result := uint64(rm32) - uint64(r32)
-	modrm.setRM32(uint32(result))
+	modrm.SetRM32(uint32(result))
 	reg.updateEFlagsSub32(rm32, r32, result)
 }
 
@@ -363,10 +363,10 @@ func (a *ALU) subR16RM16() {
 	reg := a.reg
 	reg.EIP += 1
 	modrm := NewModRM(a.reg, a.mem)
-	r16 := modrm.getR16()
-	rm16 := modrm.getRM16()
+	r16 := modrm.GetR16()
+	rm16 := modrm.GetRM16()
 	result := uint32(r16) - uint32(rm16)
-	modrm.setR16(uint16(result))
+	modrm.SetR16(uint16(result))
 	reg.updateEFlagsSub16(r16, rm16, result)
 }
 
@@ -374,10 +374,10 @@ func (a *ALU) subR32RM32() {
 	reg := a.reg
 	reg.EIP += 1
 	modrm := NewModRM(a.reg, a.mem)
-	r32 := modrm.getR32()
-	rm32 := modrm.getRM32()
+	r32 := modrm.GetR32()
+	rm32 := modrm.GetRM32()
 	result := uint64(r32) - uint64(rm32)
-	modrm.setR32(uint32(result))
+	modrm.SetR32(uint32(result))
 	reg.updateEFlagsSub32(r32, rm32, result)
 }
 
@@ -404,31 +404,33 @@ func (a *ALU) subEAXImm32() {
 func (a *ALU) subRM32Imm32(modrm *ModRM) {
 	reg := a.reg
 	mem := a.mem
-	rm32 := int32(modrm.getRM32())
-	imm32 := mem.GetSignCode32(0)
+	rm32 := modrm.GetRM32()
+	imm32 := mem.GetCode32(0)
+	result := uint64(rm32) - uint64(imm32)
 	reg.EIP += 4
-	modrm.setRM32(uint32(rm32 - imm32))
+	modrm.SetRM32(uint32(result))
+	reg.updateEFlagsSub32(rm32, imm32, result) //TODO VERIFY
 }
 
 func (a *ALU) subRM16Imm8(modrm *ModRM) {
 	reg := a.reg
 	mem := a.mem
-	rm16 := modrm.getRM16()
+	rm16 := modrm.GetRM16()
 	imm8 := mem.GetSignCode8(0)
 	reg.EIP += 1
 	result := uint32(rm16) - uint32(imm8)
-	modrm.setRM16(uint16(result))
+	modrm.SetRM16(uint16(result))
 	reg.updateEFlagsSub16(rm16, uint16(imm8), result)
 }
 
 func (a *ALU) subRM32Imm8(modrm *ModRM) {
 	reg := a.reg
 	mem := a.mem
-	rm32 := modrm.getRM32()
+	rm32 := modrm.GetRM32()
 	imm8 := mem.GetSignCode8(0)
 	reg.EIP += 1
 	result := uint64(rm32) - uint64(imm8)
-	modrm.setRM32(uint32(result))
+	modrm.SetRM32(uint32(result))
 	reg.updateEFlagsSub32(rm32, uint32(imm8), result)
 }
 
@@ -436,18 +438,20 @@ func (a *ALU) subRM8R8() {
 	reg := a.reg
 	reg.EIP += 1
 	modrm := NewModRM(a.reg, a.mem)
-	r8 := modrm.getR8()
-	rm8 := modrm.getRM8()
-	modrm.setRM8(rm8 - r8)
+	r8 := modrm.GetR8()
+	rm8 := modrm.GetRM8()
+	modrm.SetRM8(rm8 - r8)
+	//reg.updateEFlagsSub8(rm32, uint32(imm8), result)  TODO
 }
 
 func (a *ALU) subR8RM8() {
 	reg := a.reg
 	reg.EIP += 1
 	modrm := NewModRM(a.reg, a.mem)
-	r8 := modrm.getR8()
-	rm8 := modrm.getRM8()
-	modrm.setR8(rm8 - r8)
+	r8 := modrm.GetR8()
+	rm8 := modrm.GetRM8()
+	modrm.SetR8(rm8 - r8)
+	//reg.updateEFlagsSub8(rm32, uint32(imm8), result)  TODO
 }
 
 func (a *ALU) subALImm8() {
@@ -456,42 +460,43 @@ func (a *ALU) subALImm8() {
 	value := mem.GetCode8(1)
 	reg.EAX = reg.EAX - uint32(value)
 	reg.EIP += 2
+	//reg.updateEFlagsSub8(rm32, uint32(imm8), result)  TODO
 }
 
 func (a *ALU) xorRM16R16() {
 	reg := a.reg
 	reg.EIP += 1
 	modrm := NewModRM(a.reg, a.mem)
-	rm16 := modrm.getRM16()
-	r16 := modrm.getR16()
-	modrm.setRM16(rm16 ^ r16)
+	rm16 := modrm.GetRM16()
+	r16 := modrm.GetR16()
+	modrm.SetRM16(rm16 ^ r16)
 }
 
 func (a *ALU) xorRM32R32() {
 	reg := a.reg
 	reg.EIP += 1
 	modrm := NewModRM(a.reg, a.mem)
-	rm32 := modrm.getRM32()
-	r32 := modrm.getR32()
-	modrm.setRM32(rm32 ^ r32)
+	rm32 := modrm.GetRM32()
+	r32 := modrm.GetR32()
+	modrm.SetRM32(rm32 ^ r32)
 }
 
 func (a *ALU) xorR16RM16() {
 	reg := a.reg
 	reg.EIP += 1
 	modrm := NewModRM(a.reg, a.mem)
-	r16 := modrm.getR16()
-	rm16 := modrm.getRM16()
-	modrm.setR16(r16 ^ rm16)
+	r16 := modrm.GetR16()
+	rm16 := modrm.GetRM16()
+	modrm.SetR16(r16 ^ rm16)
 }
 
 func (a *ALU) xorR32RM32() {
 	reg := a.reg
 	reg.EIP += 1
 	modrm := NewModRM(a.reg, a.mem)
-	r32 := modrm.getR32()
-	rm32 := modrm.getRM32()
-	modrm.setR32(r32 ^ rm32)
+	r32 := modrm.GetR32()
+	rm32 := modrm.GetRM32()
+	modrm.SetR32(r32 ^ rm32)
 }
 
 func (a *ALU) xorAXImm16() {
@@ -516,18 +521,18 @@ func (a *ALU) xorRM8R8() {
 	reg := a.reg
 	reg.EIP += 1
 	modrm := NewModRM(a.reg, a.mem)
-	r8 := modrm.getR8()
-	rm8 := modrm.getRM8()
-	modrm.setRM8(rm8 ^ r8)
+	r8 := modrm.GetR8()
+	rm8 := modrm.GetRM8()
+	modrm.SetRM8(rm8 ^ r8)
 }
 
 func (a *ALU) xorR8RM8() {
 	reg := a.reg
 	reg.EIP += 1
 	modrm := NewModRM(a.reg, a.mem)
-	r8 := modrm.getR8()
-	rm8 := modrm.getRM8()
-	modrm.setR8(rm8 ^ r8)
+	r8 := modrm.GetR8()
+	rm8 := modrm.GetRM8()
+	modrm.SetR8(rm8 ^ r8)
 }
 
 func (a *ALU) xorALImm8() {
@@ -541,7 +546,7 @@ func (a *ALU) xorALImm8() {
 func (a *ALU) cmpRM16Imm8(modrm *ModRM) {
 	reg := a.reg
 	mem := a.mem
-	rm16 := modrm.getRM16()
+	rm16 := modrm.GetRM16()
 	imm8 := mem.GetSignCode8(0)
 	reg.EIP += 1
 	result := uint32(rm16) - uint32(imm8)
@@ -551,7 +556,7 @@ func (a *ALU) cmpRM16Imm8(modrm *ModRM) {
 func (a *ALU) cmpRM32Imm8(modrm *ModRM) {
 	reg := a.reg
 	mem := a.mem
-	rm32 := modrm.getRM32()
+	rm32 := modrm.GetRM32()
 	imm8 := mem.GetSignCode8(0)
 	reg.EIP += 1
 	result := uint64(rm32) - uint64(imm8)
@@ -559,8 +564,8 @@ func (a *ALU) cmpRM32Imm8(modrm *ModRM) {
 }
 
 func (a *ALU) incRM32(modrm *ModRM) {
-	value := modrm.getRM32()
-	modrm.setRM32(value + 1)
+	value := modrm.GetRM32()
+	modrm.SetRM32(value + 1)
 }
 
 func (a *ALU) codeFFb32() {

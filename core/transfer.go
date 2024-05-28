@@ -16,48 +16,48 @@ func (t *Transfer) MovRM8R8() {
 	reg := t.reg
 	reg.EIP += 1
 	modrm := NewModRM(t.reg, t.mem)
-	r8 := modrm.getR8()
-	modrm.setRM8(r8)
+	r8 := modrm.GetR8()
+	modrm.SetRM8(r8)
 }
 
 func (t *Transfer) MovR8RM8() {
 	reg := t.reg
 	reg.EIP += 1
 	modrm := NewModRM(t.reg, t.mem)
-	rm8 := modrm.getRM8()
-	modrm.setR8(rm8)
+	rm8 := modrm.GetRM8()
+	modrm.SetR8(rm8)
 }
 
 func (t *Transfer) MovRM16R16() {
 	reg := t.reg
 	reg.EIP += 1
 	modrm := NewModRM(t.reg, t.mem)
-	r16 := modrm.getR16()
-	modrm.setRM16(r16)
+	r16 := modrm.GetR16()
+	modrm.SetRM16(r16)
 }
 
 func (t *Transfer) MovR16RM16() {
 	reg := t.reg
 	reg.EIP += 1
 	modrm := NewModRM(t.reg, t.mem)
-	rm16 := modrm.getRM16()
-	modrm.setR16(rm16)
+	rm16 := modrm.GetRM16()
+	modrm.SetR16(rm16)
 }
 
 func (t *Transfer) MovRM32R32() {
 	reg := t.reg
 	reg.EIP += 1
 	modrm := NewModRM(t.reg, t.mem)
-	r32 := modrm.getR32()
-	modrm.setRM32(r32)
+	r32 := modrm.GetR32()
+	modrm.SetRM32(r32)
 }
 
 func (t *Transfer) MovR32RM32() {
 	reg := t.reg
 	reg.EIP += 1
 	modrm := NewModRM(t.reg, t.mem)
-	rm32 := modrm.getRM32()
-	modrm.setR32(rm32)
+	rm32 := modrm.GetRM32()
+	modrm.SetR32(rm32)
 }
 
 func (t *Transfer) MovR8Imm8() {
@@ -85,7 +85,7 @@ func (t *Transfer) MovRM16Imm16() {
 	modrm := NewModRM(t.reg, t.mem)
 	imm16 := mem.GetCode16(0)
 	reg.EIP += 2
-	modrm.setRM16(imm16)
+	modrm.SetRM16(imm16)
 }
 
 func (t *Transfer) MovR32Imm32() {
@@ -104,5 +104,5 @@ func (t *Transfer) MovRM32Imm32() {
 	modrm := NewModRM(t.reg, t.mem)
 	imm32 := mem.GetCode32(0)
 	reg.EIP += 4
-	modrm.setRM32(imm32)
+	modrm.SetRM32(imm32)
 }
